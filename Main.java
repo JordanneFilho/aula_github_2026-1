@@ -7,6 +7,7 @@ public class Main {
         do {
             Menu mainMenu = new Menu("Menu Principal", Arrays.asList(
                 "Cliente",
+                "Conta",
                 "Saque",
                 "Sair"
             ));
@@ -16,14 +17,19 @@ public class Main {
                 case 1:
                     CadastrarCliente.menu();
                     break;
-                case 2:
-                    RealizarSaque.menu();
-                    break;
-                case 3:
-                    System.out.println("Encerrando sistema...");
-                    break;
-            }
+               case 2:
+    AbrirConta.abrirConta();
+    break;
 
-        } while (opcao != 3);
+case 3:
+    RealizarSaque.menu();
+    break;
+
+case 4:
+    System.out.println("Encerrando sistema...");
+    break;
+
+            }
+        } while (opcao != 4);
     }
 }
