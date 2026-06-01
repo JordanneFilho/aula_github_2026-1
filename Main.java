@@ -17,18 +17,15 @@ public class Main {
                 case 1:
                     CadastrarCliente.menu();
                     break;
-               case 2:
-    AbrirConta.abrirConta();
-    break;
-
-case 3:
-    RealizarSaque.menu();
-    break;
-
-case 4:
-    System.out.println("Encerrando sistema...");
-    break;
-
+                case 2:
+                    AbrirConta.menu();
+                    break;
+                case 3:
+                    RealizarSaque.menu();
+                    break;
+                case 4:
+                    System.out.println("Encerrando sistema...");
+                    break;
             }
         } while (opcao != 4);
     }
