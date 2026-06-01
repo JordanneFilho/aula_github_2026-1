@@ -37,21 +37,21 @@ public class CadastrarCliente {
 
     // Cadastra um novo cliente
     static void cadastrar() {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
 
-        System.out.print("Nome: ");
-        String nome = scanner.nextLine();
+            System.out.print("CPF: ");
+            String cpf = scanner.nextLine();
 
-        System.out.print("CPF: ");
-        String cpf = scanner.nextLine();
-
-        System.out.print("Saldo inicial: R$ ");
-        try {
-            double saldo = Double.parseDouble(scanner.nextLine());
-            clientes.add(new String[]{nome, cpf, String.format("%.2f", saldo)});
-            System.out.println("\nCliente '" + nome + "' cadastrado com sucesso!");
-        } catch (NumberFormatException e) {
-            System.out.println("Saldo invalido! Digite um numero.");
+            System.out.print("Saldo inicial: R$ ");
+            try {
+                double saldo = Double.parseDouble(scanner.nextLine());
+                clientes.add(new String[]{nome, cpf, String.format("%.2f", saldo)});
+                System.out.println("\nCliente '" + nome + "' cadastrado com sucesso!");
+            } catch (NumberFormatException e) {
+                System.out.println("Saldo invalido! Digite um numero.");
+            }
         }
     }
 
