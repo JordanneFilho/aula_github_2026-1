@@ -10,6 +10,7 @@ public class Main {
                 "Conta",
                 "Saque",
                 "Extrato",
+                "Encerrar Conta",
                 "Sair"
             ));
             opcao = mainMenu.getSelection();
@@ -28,9 +29,12 @@ public class Main {
                     ExtratosBancarios.menu();
                     break;
                 case 5:
+                    EncerrarConta.menu();
+                    break;
+                case 6:
                     System.out.println("Encerrando sistema...");
                     break;
             }
-        } while (opcao != 5);
+        } while (opcao != 6);
     }
 }
